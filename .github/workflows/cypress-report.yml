@@ -16,15 +16,16 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install cypress and verify
-	run: | 
-	  npm ci $(npm bin)/cypress verify
+	      run: | 
+	        npm ci 
+          $(npm bin)/cypress verify
 
       - name: Run Cypress tests
         run: npm run test:chrome
 	      continue-on-error: false
 
       - name: Copy test execution videos and screenshots
-	run: |
+	      run: |
           mkdir public
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
@@ -33,7 +34,7 @@ jobs:
         run: npm run combine:report
 
       - name: Generate HTML report
-	run: npm run generate:report
+	      run: npm run generate:report
 
       - name: Deploy report page to Github Page
         uses: peaceiris/actions-gh-pages@v3
