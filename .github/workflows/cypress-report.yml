@@ -1,4 +1,5 @@
 name: Generate Cypress Report
+
 on: 
  push:
    branches:
