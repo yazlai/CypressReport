@@ -33,7 +33,7 @@ context('Actions', () => {
       // Ignore error checking prior to type
       // like whether the input is visible or disabled
       .type('disabled error checking', { force: true })
-      .should('have.value', 'disabled error checking')
+      .should('have.value', 'disabled error checkingGGGGGGG')
   })
 
   it('.focus() - focus on a DOM element', () => {
